@@ -89,6 +89,32 @@ body {
   font-size: 0.8rem;
 }
 
+.sort-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  overflow-x: auto;
+}
+
+.sort-buttons button {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--row-bg);
+  color: var(--text);
+  font-size: 0.68rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sort-buttons button.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .col-header {
   display: grid;
   grid-template-columns: var(--row-cols);

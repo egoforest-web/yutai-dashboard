@@ -10,12 +10,14 @@
     historyCache: new Map(), // code -> {dates, closes}
     chartInstances: new Map(), // code -> Chart
     selectedPeriod: new Map(), // code -> "1y" | "5y" | "10y"
+    sortKey: "code", // "code" | "change" | "profit"
   };
 
   const rowList = document.getElementById("rowList");
   const rowTemplate = document.getElementById("rowTemplate");
   const searchBox = document.getElementById("searchBox");
   const updatedAtEl = document.getElementById("updatedAt");
+  const sortButtons = document.querySelectorAll(".sort-buttons button");
 
   function formatMonths(m1, m2) {
     const parts = [m1, m2].filter(
@@ -58,9 +60,6 @@
   async function loadData() {
     const holdingsRes = await fetch("data/holdings.json");
     state.holdings = await holdingsRes.json();
-    for (const h of state.holdings) {
-      state.holdingsByCode.set(h.code, h);
-    }
 
     try {
       const todayRes = await fetch("data/today.json", { cache: "no-store" });
@@ -71,8 +70,46 @@
       // today.json が無い場合は取得値のみで表示する
     }
 
+    for (const h of state.holdings) {
+      state.holdingsByCode.set(h.code, h);
+      const todayEntry = state.today.prices && state.today.prices[h.code];
+      h.current = todayEntry ? todayEntry.close : null;
+      h.changePct = todayEntry ? todayEntry.change_pct : null;
+      h.profitPct =
+        h.current !== null && h.acquisition_price
+          ? ((h.current - h.acquisition_price) / h.acquisition_price) * 100
+          : null;
+    }
+
     updatedAtEl.textContent = formatUpdatedAt(state.today.updated_at);
-    renderRowList(state.holdings);
+    refreshList();
+  }
+
+  function sortHoldings(list, sortKey) {
+    if (sortKey !== "change" && sortKey !== "profit") return list;
+    const field = sortKey === "change" ? "changePct" : "profitPct";
+    const withValue = [];
+    const withoutValue = [];
+    for (const h of list) {
+      (h[field] === null || h[field] === undefined ? withoutValue : withValue).push(h);
+    }
+    withValue.sort((a, b) => a[field] - b[field]);
+    return withValue.concat(withoutValue);
+  }
+
+  function refreshList() {
+    const filtered = filterHoldings(state.holdings, searchBox.value);
+    renderRowList(sortHoldings(filtered, state.sortKey));
+  }
+
+  function filterHoldings(holdings, query) {
+    const q = query.trim().toLowerCase();
+    if (!q) return holdings;
+    return holdings.filter((h) => {
+      const name = (h.name || "").toLowerCase();
+      const code = (h.code || "").toLowerCase();
+      return name.includes(q) || code.includes(q);
+    });
   }
 
   function renderRowList(holdings) {
@@ -99,24 +136,16 @@
     node.querySelector(".row-code").textContent = holding.code;
     node.querySelector(".row-name").textContent = holding.name || "";
 
-    const todayEntry = state.today.prices && state.today.prices[holding.code];
-    const current = todayEntry ? todayEntry.close : null;
-    const changePct = todayEntry ? todayEntry.change_pct : null;
-    const profitPct =
-      current !== null && holding.acquisition_price
-        ? ((current - holding.acquisition_price) / holding.acquisition_price) * 100
-        : null;
-
     node.querySelector(".row-acq").textContent = formatYen(holding.acquisition_price);
-    node.querySelector(".row-current").textContent = formatYen(current);
+    node.querySelector(".row-current").textContent = formatYen(holding.current);
 
     const changeEl = node.querySelector(".row-change");
-    changeEl.textContent = formatSignedPct(changePct);
-    changeEl.classList.add(...[signClass(changePct)].filter(Boolean));
+    changeEl.textContent = formatSignedPct(holding.changePct);
+    changeEl.classList.add(...[signClass(holding.changePct)].filter(Boolean));
 
     const profitEl = node.querySelector(".row-profit");
-    profitEl.textContent = formatSignedPct(profitPct);
-    profitEl.classList.add(...[signClass(profitPct)].filter(Boolean));
+    profitEl.textContent = formatSignedPct(holding.profitPct);
+    profitEl.classList.add(...[signClass(holding.profitPct)].filter(Boolean));
 
     node.querySelector(".detail-market").textContent = holding.market || "-";
     node.querySelector(".detail-div-month").textContent = formatMonths(
@@ -272,21 +301,15 @@
     state.chartInstances.set(code, chart);
   }
 
-  function applySearch(query) {
-    const q = query.trim().toLowerCase();
-    if (!q) {
-      renderRowList(state.holdings);
-      return;
-    }
-    const filtered = state.holdings.filter((h) => {
-      const name = (h.name || "").toLowerCase();
-      const code = (h.code || "").toLowerCase();
-      return name.includes(q) || code.includes(q);
-    });
-    renderRowList(filtered);
-  }
+  searchBox.addEventListener("input", refreshList);
 
-  searchBox.addEventListener("input", (ev) => applySearch(ev.target.value));
+  sortButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.sortKey = btn.dataset.sort;
+      sortButtons.forEach((b) => b.classList.toggle("active", b === btn));
+      refreshList();
+    });
+  });
 
   loadData().catch((err) => {
     rowList.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${err}</p>`;
