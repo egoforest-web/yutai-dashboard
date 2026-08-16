@@ -176,13 +176,23 @@
     return node;
   }
 
+  function closeRow(row) {
+    row.classList.remove("open");
+    row.querySelector(".row-detail").hidden = true;
+  }
+
   function toggleRow(row) {
-    const detail = row.querySelector(".row-detail");
-    const isOpen = row.classList.toggle("open");
-    detail.hidden = !isOpen;
-    if (isOpen) {
-      openChart(row);
+    const wasOpen = row.classList.contains("open");
+    rowList.querySelectorAll(".row.open").forEach((r) => {
+      if (r !== row) closeRow(r);
+    });
+    if (wasOpen) {
+      closeRow(row);
+      return;
     }
+    row.classList.add("open");
+    row.querySelector(".row-detail").hidden = false;
+    openChart(row);
   }
 
   async function openChart(row) {

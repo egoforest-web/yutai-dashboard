@@ -9,7 +9,7 @@
   --accent-soft: #eef2ff;
   --up: #d92626;
   --down: #1d6fd9;
-  --row-cols: minmax(0, 1fr) 3.6em 3.6em 3.4em 3.4em 1.1em;
+  --row-cols: minmax(0, 1fr) 3.6rem 3.6rem 4.2rem 3.4rem 1.1rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +50,7 @@ body {
   top: 0;
   z-index: 10;
   background: var(--bg);
-  padding: 8px 10px 4px;
+  padding: 8px 6px 4px;
   border-bottom: 1px solid var(--border);
 }
 
