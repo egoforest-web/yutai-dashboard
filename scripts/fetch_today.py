@@ -36,6 +36,9 @@ def load_existing_prices():
 
 
 def fetch_latest_prices(codes):
+    """直近終値と前日比(%)をYahoo自身の直近2営業日分から計算して返す。
+    前日比はYahoo基準に統一し、こちらのDBの値とは混在させない。
+    """
     tickers = [f"{code}.T" for code in codes]
     df = yf.download(
         tickers=tickers,
@@ -58,9 +61,15 @@ def fetch_latest_prices(codes):
                 continue
             last_date = series.index[-1]
             last_close = float(series.iloc[-1])
+            change_pct = None
+            if len(series) >= 2:
+                prev_close = float(series.iloc[-2])
+                if prev_close:
+                    change_pct = round((last_close - prev_close) / prev_close * 100, 2)
             prices[code] = {
                 "date": last_date.strftime("%Y-%m-%d"),
                 "close": last_close,
+                "change_pct": change_pct,
             }
         except (KeyError, IndexError):
             continue

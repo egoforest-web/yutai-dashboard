@@ -5,14 +5,15 @@
 
   const state = {
     holdings: [],
+    holdingsByCode: new Map(),
     today: { updated_at: null, prices: {} },
     historyCache: new Map(), // code -> {dates, closes}
     chartInstances: new Map(), // code -> Chart
     selectedPeriod: new Map(), // code -> "1y" | "5y" | "10y"
   };
 
-  const cardList = document.getElementById("cardList");
-  const cardTemplate = document.getElementById("cardTemplate");
+  const rowList = document.getElementById("rowList");
+  const rowTemplate = document.getElementById("rowTemplate");
   const searchBox = document.getElementById("searchBox");
   const updatedAtEl = document.getElementById("updatedAt");
 
@@ -33,12 +34,33 @@
       hour: "2-digit",
       minute: "2-digit",
     }).format(d);
-    return `当日データ更新: ${jst} JST時点`;
+    return `当日 ${jst}時点`;
+  }
+
+  function formatYen(value) {
+    if (value === null || value === undefined) return "-";
+    return Math.round(value).toLocaleString("ja-JP");
+  }
+
+  function formatSignedPct(value) {
+    if (value === null || value === undefined || Number.isNaN(value)) return "-";
+    const sign = value > 0 ? "+" : "";
+    return `${sign}${value.toFixed(1)}%`;
+  }
+
+  function signClass(value) {
+    if (value === null || value === undefined || Number.isNaN(value)) return "";
+    if (value > 0) return "up";
+    if (value < 0) return "down";
+    return "";
   }
 
   async function loadData() {
     const holdingsRes = await fetch("data/holdings.json");
     state.holdings = await holdingsRes.json();
+    for (const h of state.holdings) {
+      state.holdingsByCode.set(h.code, h);
+    }
 
     try {
       const todayRes = await fetch("data/today.json", { cache: "no-store" });
@@ -46,77 +68,97 @@
         state.today = await todayRes.json();
       }
     } catch (e) {
-      // today.json が無い場合は前日分のみで表示する
+      // today.json が無い場合は取得値のみで表示する
     }
 
     updatedAtEl.textContent = formatUpdatedAt(state.today.updated_at);
-    renderCardList(state.holdings);
+    renderRowList(state.holdings);
   }
 
-  function renderCardList(holdings) {
-    cardList.innerHTML = "";
+  function renderRowList(holdings) {
+    rowList.innerHTML = "";
     if (holdings.length === 0) {
       const p = document.createElement("p");
       p.className = "empty";
       p.textContent = "該当する銘柄がありません";
-      cardList.appendChild(p);
+      rowList.appendChild(p);
       return;
     }
     const frag = document.createDocumentFragment();
     for (const holding of holdings) {
-      frag.appendChild(buildCard(holding));
+      frag.appendChild(buildRow(holding));
     }
-    cardList.appendChild(frag);
+    rowList.appendChild(frag);
   }
 
-  function buildCard(holding) {
-    const node = cardTemplate.content.cloneNode(true);
-    const card = node.querySelector(".card");
-    card.dataset.code = holding.code;
+  function buildRow(holding) {
+    const node = rowTemplate.content.cloneNode(true);
+    const row = node.querySelector(".row");
+    row.dataset.code = holding.code;
 
-    node.querySelector(".card-code").textContent = holding.code;
-    node.querySelector(".card-name").textContent = holding.name || "";
-    node.querySelector(".card-market").textContent = holding.market || "";
-    node.querySelector(".card-div-month").textContent = formatMonths(
+    node.querySelector(".row-code").textContent = holding.code;
+    node.querySelector(".row-name").textContent = holding.name || "";
+
+    const todayEntry = state.today.prices && state.today.prices[holding.code];
+    const current = todayEntry ? todayEntry.close : null;
+    const changePct = todayEntry ? todayEntry.change_pct : null;
+    const profitPct =
+      current !== null && holding.acquisition_price
+        ? ((current - holding.acquisition_price) / holding.acquisition_price) * 100
+        : null;
+
+    node.querySelector(".row-acq").textContent = formatYen(holding.acquisition_price);
+    node.querySelector(".row-current").textContent = formatYen(current);
+
+    const changeEl = node.querySelector(".row-change");
+    changeEl.textContent = formatSignedPct(changePct);
+    changeEl.classList.add(...[signClass(changePct)].filter(Boolean));
+
+    const profitEl = node.querySelector(".row-profit");
+    profitEl.textContent = formatSignedPct(profitPct);
+    profitEl.classList.add(...[signClass(profitPct)].filter(Boolean));
+
+    node.querySelector(".detail-market").textContent = holding.market || "-";
+    node.querySelector(".detail-div-month").textContent = formatMonths(
       holding.div_month1,
       holding.div_month2
     );
-    node.querySelector(".card-div-amount").textContent = holding.div_amount
+    node.querySelector(".detail-div-amount").textContent = holding.div_amount
       ? `${holding.div_amount}円`
       : "-";
-    node.querySelector(".card-yutai-month").textContent = formatMonths(
+    node.querySelector(".detail-yutai-month").textContent = formatMonths(
       holding.yutai_month1,
       holding.yutai_month2
     );
-    node.querySelector(".card-yutai-content").textContent =
+    node.querySelector(".detail-yutai-content").textContent =
       holding.yutai_content || "-";
 
-    const summaryBtn = node.querySelector(".card-summary");
-    summaryBtn.addEventListener("click", () => toggleCard(card));
+    const summaryBtn = node.querySelector(".row-summary");
+    summaryBtn.addEventListener("click", () => toggleRow(row));
 
     const periodButtons = node.querySelectorAll(".period-buttons button");
     periodButtons.forEach((btn) => {
       btn.addEventListener("click", (ev) => {
         ev.stopPropagation();
-        setPeriod(card, btn.dataset.period);
+        setPeriod(row, btn.dataset.period);
       });
     });
 
     return node;
   }
 
-  function toggleCard(card) {
-    const chartArea = card.querySelector(".card-chart");
-    const isOpen = card.classList.toggle("open");
-    chartArea.hidden = !isOpen;
+  function toggleRow(row) {
+    const detail = row.querySelector(".row-detail");
+    const isOpen = row.classList.toggle("open");
+    detail.hidden = !isOpen;
     if (isOpen) {
-      openChart(card);
+      openChart(row);
     }
   }
 
-  async function openChart(card) {
-    const code = card.dataset.code;
-    const statusEl = card.querySelector(".chart-status");
+  async function openChart(row) {
+    const code = row.dataset.code;
+    const statusEl = row.querySelector(".chart-status");
     if (!state.historyCache.has(code)) {
       statusEl.textContent = "読み込み中...";
       try {
@@ -131,17 +173,17 @@
     }
     statusEl.textContent = "";
     const period = state.selectedPeriod.get(code) || "1y";
-    drawChart(card, period);
+    drawChart(row, period);
   }
 
-  function setPeriod(card, period) {
-    const code = card.dataset.code;
+  function setPeriod(row, period) {
+    const code = row.dataset.code;
     state.selectedPeriod.set(code, period);
-    card.querySelectorAll(".period-buttons button").forEach((btn) => {
+    row.querySelectorAll(".period-buttons button").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.period === period);
     });
     if (state.historyCache.has(code)) {
-      drawChart(card, period);
+      drawChart(row, period);
     }
   }
 
@@ -166,23 +208,27 @@
     return { dates: dates.slice(start), closes: closes.slice(start) };
   }
 
-  function drawChart(card, period) {
-    const code = card.dataset.code;
+  function drawChart(row, period) {
+    const code = row.dataset.code;
+    const holding = state.holdingsByCode.get(code);
     const { dates, closes } = mergedSeries(code);
     const sliced = sliceByPeriod(dates, closes, period);
-    const canvas = card.querySelector("canvas");
+    const canvas = row.querySelector("canvas");
 
     const existing = state.chartInstances.get(code);
     if (existing) {
-      existing.data.labels = sliced.dates;
-      existing.data.datasets[0].data = sliced.closes;
-      existing.update();
-      return;
+      existing.destroy();
+      state.chartInstances.delete(code);
     }
 
-    const accent = getComputedStyle(document.documentElement)
-      .getPropertyValue("--accent")
-      .trim();
+    const buyDates = new Set(holding && holding.buy_dates ? holding.buy_dates : []);
+    const buyPoints = sliced.dates.map((d, i) =>
+      buyDates.has(d) ? sliced.closes[i] : null
+    );
+
+    const styles = getComputedStyle(document.documentElement);
+    const accent = styles.getPropertyValue("--accent").trim();
+    const up = styles.getPropertyValue("--up").trim();
 
     const chart = new Chart(canvas.getContext("2d"), {
       type: "line",
@@ -190,11 +236,20 @@
         labels: sliced.dates,
         datasets: [
           {
+            label: "終値",
             data: sliced.closes,
             borderColor: accent || "#2563eb",
             borderWidth: 1.5,
             pointRadius: 0,
             tension: 0.15,
+          },
+          {
+            label: "買い日",
+            data: buyPoints,
+            showLine: false,
+            pointRadius: 4,
+            pointBackgroundColor: up || "#d92626",
+            pointBorderColor: up || "#d92626",
           },
         ],
       },
@@ -220,7 +275,7 @@
   function applySearch(query) {
     const q = query.trim().toLowerCase();
     if (!q) {
-      renderCardList(state.holdings);
+      renderRowList(state.holdings);
       return;
     }
     const filtered = state.holdings.filter((h) => {
@@ -228,12 +283,12 @@
       const code = (h.code || "").toLowerCase();
       return name.includes(q) || code.includes(q);
     });
-    renderCardList(filtered);
+    renderRowList(filtered);
   }
 
   searchBox.addEventListener("input", (ev) => applySearch(ev.target.value));
 
   loadData().catch((err) => {
-    cardList.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${err}</p>`;
+    rowList.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${err}</p>`;
   });
 })();

@@ -8,7 +8,12 @@
     "div_amount": 16,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "3,000円相当の自社製品（まいたけ等）"
+    "yutai_content": "3,000円相当の自社製品（まいたけ等）",
+    "acquisition_price": 1082.4,
+    "buy_dates": [
+      "2024-03-13",
+      "2026-02-10"
+    ]
   },
   {
     "code": "1420",
@@ -19,7 +24,11 @@
     "div_amount": 25,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 661.0,
+    "buy_dates": [
+      "2026-04-08"
+    ]
   },
   {
     "code": "1887",
@@ -30,7 +39,11 @@
     "div_amount": 22,
     "yutai_month1": "-",
     "yutai_month2": "-",
-    "yutai_content": "-"
+    "yutai_content": "-",
+    "acquisition_price": 514.0,
+    "buy_dates": [
+      "2024-02-16"
+    ]
   },
   {
     "code": "2311",
@@ -41,7 +54,11 @@
     "div_amount": 32,
     "yutai_month1": 6,
     "yutai_month2": 12,
-    "yutai_content": "抽選で太陽光発電システムまたは蓄電池無償設置権"
+    "yutai_content": "抽選で太陽光発電システムまたは蓄電池無償設置権",
+    "acquisition_price": 788.0,
+    "buy_dates": [
+      "2024-12-13"
+    ]
   },
   {
     "code": "2385",
@@ -52,7 +69,12 @@
     "div_amount": 10,
     "yutai_month1": 6,
     "yutai_month2": "-",
-    "yutai_content": "｢イミダポイント｣付与　2,000ポイント"
+    "yutai_content": "｢イミダポイント｣付与　2,000ポイント",
+    "acquisition_price": 259.3,
+    "buy_dates": [
+      "2026-02-10",
+      "2026-02-12"
+    ]
   },
   {
     "code": "247A",
@@ -63,7 +85,12 @@
     "div_amount": 0,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "8,100円相当の自社商品（化粧品）"
+    "yutai_content": "8,100円相当の自社商品（化粧品）",
+    "acquisition_price": 685.5,
+    "buy_dates": [
+      "2026-04-27",
+      "2026-06-04"
+    ]
   },
   {
     "code": "2499",
@@ -74,7 +101,11 @@
     "div_amount": 14,
     "yutai_month1": "-",
     "yutai_month2": "-",
-    "yutai_content": null
+    "yutai_content": null,
+    "acquisition_price": 314.0,
+    "buy_dates": [
+      "2026-05-07"
+    ]
   },
   {
     "code": "2573",
@@ -85,7 +116,11 @@
     "div_amount": 30,
     "yutai_month1": 6,
     "yutai_month2": 12,
-    "yutai_content": "(1)｢Ｃｏｋｅ ＯＮ｣ドリンクチケットまたは(2)自社商品または(3)自社製品（缶・ペットボトル飲料）"
+    "yutai_content": "(1)｢Ｃｏｋｅ ＯＮ｣ドリンクチケットまたは(2)自社商品または(3)自社製品（缶・ペットボトル飲料）",
+    "acquisition_price": 4090.0,
+    "buy_dates": [
+      "2026-03-23"
+    ]
   },
   {
     "code": "2678",
@@ -96,7 +131,11 @@
     "div_amount": 38,
     "yutai_month1": 5,
     "yutai_month2": 11,
-    "yutai_content": "2,000円相当の｢ＬＯＨＡＣＯ｣割引クーポン券（500円×4枚）"
+    "yutai_content": "2,000円相当の｢ＬＯＨＡＣＯ｣割引クーポン券（500円×4枚）",
+    "acquisition_price": 1190.0,
+    "buy_dates": [
+      "2026-05-07"
+    ]
   },
   {
     "code": "2769",
@@ -107,7 +146,11 @@
     "div_amount": 14,
     "yutai_month1": 11,
     "yutai_month2": "-",
-    "yutai_content": "10,000円相当の買物券（1,000円×10枚）"
+    "yutai_content": "10,000円相当の買物券（1,000円×10枚）",
+    "acquisition_price": 959.0,
+    "buy_dates": [
+      "2019-01-21"
+    ]
   },
   {
     "code": "2790",
@@ -118,7 +161,11 @@
     "div_amount": 58,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "ＵＣギフトカード"
+    "yutai_content": "ＵＣギフトカード",
+    "acquisition_price": 1861.0,
+    "buy_dates": [
+      "2025-02-07"
+    ]
   },
   {
     "code": "2792",
@@ -129,7 +176,12 @@
     "div_amount": 30,
     "yutai_month1": 5,
     "yutai_month2": "-",
-    "yutai_content": "自社商品引換券（500円）"
+    "yutai_content": "自社商品引換券（500円）",
+    "acquisition_price": 1456.8,
+    "buy_dates": [
+      "2024-04-08",
+      "2025-07-23"
+    ]
   },
   {
     "code": "2796",
@@ -140,7 +192,11 @@
     "div_amount": 14,
     "yutai_month1": 11,
     "yutai_month2": "-",
-    "yutai_content": "自社グループ製品等または2,500円相当の自社グループ商品券"
+    "yutai_content": "自社グループ製品等または2,500円相当の自社グループ商品券",
+    "acquisition_price": 485.0,
+    "buy_dates": [
+      "2025-02-06"
+    ]
   },
   {
     "code": "3024",
@@ -151,7 +207,11 @@
     "div_amount": 40,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 997.0,
+    "buy_dates": [
+      "2026-06-09"
+    ]
   },
   {
     "code": "3048",
@@ -162,7 +222,11 @@
     "div_amount": 15,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "買物優待券（1,000円）"
+    "yutai_content": "買物優待券（1,000円）",
+    "acquisition_price": 975.8,
+    "buy_dates": [
+      "2021-12-08"
+    ]
   },
   {
     "code": "3059",
@@ -173,7 +237,11 @@
     "div_amount": 20,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "2,000円相当の自社買物券"
+    "yutai_content": "2,000円相当の自社買物券",
+    "acquisition_price": 910.0,
+    "buy_dates": [
+      "2024-12-16"
+    ]
   },
   {
     "code": "3070",
@@ -184,7 +252,11 @@
     "div_amount": 0,
     "yutai_month1": 1,
     "yutai_month2": 7,
-    "yutai_content": "自社ポイント付与"
+    "yutai_content": "自社ポイント付与",
+    "acquisition_price": 100.0,
+    "buy_dates": [
+      "2026-04-27"
+    ]
   },
   {
     "code": "3134",
@@ -195,7 +267,11 @@
     "div_amount": 22.5,
     "yutai_month1": 4,
     "yutai_month2": 10,
-    "yutai_content": "1,500円相当の｢Ｈａｍｅｅ本店｣利用クーポン"
+    "yutai_content": "1,500円相当の｢Ｈａｍｅｅ本店｣利用クーポン",
+    "acquisition_price": 520.0,
+    "buy_dates": [
+      "2025-11-27"
+    ]
   },
   {
     "code": "3166",
@@ -206,7 +282,11 @@
     "div_amount": 54,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "2,000円相当のクオカード"
+    "yutai_content": "2,000円相当のクオカード",
+    "acquisition_price": 1367.0,
+    "buy_dates": [
+      "2026-06-04"
+    ]
   },
   {
     "code": "3167",
@@ -217,7 +297,11 @@
     "div_amount": 28,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "(1)天然水（500ｍｌ入）または(2)天然水宅配サービス（12ｌ入）または(3)クオカードまたは"
+    "yutai_content": "(1)天然水（500ｍｌ入）または(2)天然水宅配サービス（12ｌ入）または(3)クオカードまたは",
+    "acquisition_price": 988.0,
+    "buy_dates": [
+      "2021-01-22"
+    ]
   },
   {
     "code": "3222",
@@ -228,7 +312,11 @@
     "div_amount": 16,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "(1)買物優待券（100円割引）または(2)食品"
+    "yutai_content": "(1)買物優待券（100円割引）または(2)食品",
+    "acquisition_price": 793.0,
+    "buy_dates": [
+      "2024-12-09"
+    ]
   },
   {
     "code": "3246",
@@ -239,7 +327,11 @@
     "div_amount": 24,
     "yutai_month1": 1,
     "yutai_month2": "-",
-    "yutai_content": "500円相当クオカード"
+    "yutai_content": "500円相当クオカード",
+    "acquisition_price": 730.0,
+    "buy_dates": [
+      "2024-06-26"
+    ]
   },
   {
     "code": "3387",
@@ -250,7 +342,12 @@
     "div_amount": 6,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "優待食事券2,000円相当"
+    "yutai_content": "優待食事券2,000円相当",
+    "acquisition_price": 718.3,
+    "buy_dates": [
+      "2024-01-09",
+      "2026-03-05"
+    ]
   },
   {
     "code": "3548",
@@ -261,7 +358,11 @@
     "div_amount": 38,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "クーポン（2,000円相当）"
+    "yutai_content": "クーポン（2,000円相当）",
+    "acquisition_price": 781.0,
+    "buy_dates": [
+      "2023-10-24"
+    ]
   },
   {
     "code": "3598",
@@ -272,7 +373,11 @@
     "div_amount": null,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "優待券"
+    "yutai_content": "優待券",
+    "acquisition_price": 173.0,
+    "buy_dates": [
+      "2024-03-25"
+    ]
   },
   {
     "code": "3641",
@@ -283,7 +388,11 @@
     "div_amount": 10,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "11,000円（税込）のギフトコード"
+    "yutai_content": "11,000円（税込）のギフトコード",
+    "acquisition_price": 881.0,
+    "buy_dates": [
+      "2023-11-30"
+    ]
   },
   {
     "code": "3726",
@@ -294,7 +403,12 @@
     "div_amount": null,
     "yutai_month1": 9,
     "yutai_month2": "-",
-    "yutai_content": "(1)自社商品（化粧品）"
+    "yutai_content": "(1)自社商品（化粧品）",
+    "acquisition_price": 459.4,
+    "buy_dates": [
+      "2024-08-05",
+      "2026-02-04"
+    ]
   },
   {
     "code": "3815",
@@ -305,7 +419,11 @@
     "div_amount": 0,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "デジタルギフト 100株以上2,000円分（Amazonギフト等に交換可、継続保有で増額、年2回）"
+    "yutai_content": "デジタルギフト 100株以上2,000円分（Amazonギフト等に交換可、継続保有で増額、年2回）",
+    "acquisition_price": 458.0,
+    "buy_dates": [
+      "2026-08-14"
+    ]
   },
   {
     "code": "3863",
@@ -316,7 +434,11 @@
     "div_amount": 40,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社グループ製品詰合せ（ティッシュペーパー・トイレットペーパー等）"
+    "yutai_content": "自社グループ製品詰合せ（ティッシュペーパー・トイレットペーパー等）",
+    "acquisition_price": 1220.0,
+    "buy_dates": [
+      "2024-03-25"
+    ]
   },
   {
     "code": "4218",
@@ -327,7 +449,12 @@
     "div_amount": 40,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "3,500円相当の自社製品詰合せ（文房具等）"
+    "yutai_content": "3,500円相当の自社製品詰合せ（文房具等）",
+    "acquisition_price": 1825.8,
+    "buy_dates": [
+      "2024-03-13",
+      "2026-05-01"
+    ]
   },
   {
     "code": "4410",
@@ -338,7 +465,11 @@
     "div_amount": 42,
     "yutai_month1": "-",
     "yutai_month2": "-",
-    "yutai_content": null
+    "yutai_content": null,
+    "acquisition_price": 797.0,
+    "buy_dates": [
+      "2025-05-02"
+    ]
   },
   {
     "code": "4442",
@@ -349,7 +480,12 @@
     "div_amount": 4,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "7,500円相当のＱＵＯカード"
+    "yutai_content": "7,500円相当のＱＵＯカード",
+    "acquisition_price": 409.0,
+    "buy_dates": [
+      "2025-03-12",
+      "2025-12-19"
+    ]
   },
   {
     "code": "4559",
@@ -360,7 +496,12 @@
     "div_amount": 44,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "自社製品（｢ヘパリーゼＷ｣100ｍｌ入10本）"
+    "yutai_content": "自社製品（｢ヘパリーゼＷ｣100ｍｌ入10本）",
+    "acquisition_price": 2043.5,
+    "buy_dates": [
+      "2025-02-07",
+      "2025-08-14"
+    ]
   },
   {
     "code": "4650",
@@ -371,7 +512,11 @@
     "div_amount": 0,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社またはＲＩＺＡＰグループ商品"
+    "yutai_content": "自社またはＲＩＺＡＰグループ商品",
+    "acquisition_price": 294.0,
+    "buy_dates": [
+      "2022-06-09"
+    ]
   },
   {
     "code": "4668",
@@ -382,7 +527,12 @@
     "div_amount": 24,
     "yutai_month1": 8,
     "yutai_month2": "-",
-    "yutai_content": "500円相当クオカード"
+    "yutai_content": "500円相当クオカード",
+    "acquisition_price": 684.5,
+    "buy_dates": [
+      "2024-01-15",
+      "2026-04-27"
+    ]
   },
   {
     "code": "4755",
@@ -393,7 +543,11 @@
     "div_amount": 0,
     "yutai_month1": 12,
     "yutai_month2": "-",
-    "yutai_content": "｢楽天モバイル｣音声＋データ通信（30ＧＢ）1年間無料"
+    "yutai_content": "｢楽天モバイル｣音声＋データ通信（30ＧＢ）1年間無料",
+    "acquisition_price": 777.1,
+    "buy_dates": [
+      "2024-02-22"
+    ]
   },
   {
     "code": "4765",
@@ -404,7 +558,12 @@
     "div_amount": 16,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "(1)自社サービス無料購読クーポン（｢株式新聞｣ウェブ版）\n(2)仮想通貨｢ＸＲＰ｣"
+    "yutai_content": "(1)自社サービス無料購読クーポン（｢株式新聞｣ウェブ版）\n(2)仮想通貨｢ＸＲＰ｣",
+    "acquisition_price": 577.5,
+    "buy_dates": [
+      "2026-06-12",
+      "2026-06-30"
+    ]
   },
   {
     "code": "4926",
@@ -415,7 +574,13 @@
     "div_amount": 15,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社商品セット"
+    "yutai_content": "自社商品セット",
+    "acquisition_price": 1120.4,
+    "buy_dates": [
+      "2024-02-14",
+      "2024-03-11",
+      "2024-12-05"
+    ]
   },
   {
     "code": "4929",
@@ -426,7 +591,11 @@
     "div_amount": 12,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社商品（シャンプー・トリートメント等）"
+    "yutai_content": "自社商品（シャンプー・トリートメント等）",
+    "acquisition_price": 741.0,
+    "buy_dates": [
+      "2026-05-20"
+    ]
   },
   {
     "code": "4931",
@@ -437,7 +606,12 @@
     "div_amount": 57,
     "yutai_month1": 9,
     "yutai_month2": "-",
-    "yutai_content": "6,000円相当の自社商品（化粧品）"
+    "yutai_content": "6,000円相当の自社商品（化粧品）",
+    "acquisition_price": 2006.0,
+    "buy_dates": [
+      "2024-08-05",
+      "2026-05-11"
+    ]
   },
   {
     "code": "4994",
@@ -448,7 +622,12 @@
     "div_amount": 70,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "5,000円相当の自社関連商品（食品等詰合せ）"
+    "yutai_content": "5,000円相当の自社関連商品（食品等詰合せ）",
+    "acquisition_price": 2228.3,
+    "buy_dates": [
+      "2026-04-27",
+      "2026-05-25"
+    ]
   },
   {
     "code": "544A",
@@ -459,7 +638,11 @@
     "div_amount": 35,
     "yutai_month1": 3,
     "yutai_month2": null,
-    "yutai_content": "長野県坂城町特産品1500"
+    "yutai_content": "長野県坂城町特産品1500",
+    "acquisition_price": 515.0,
+    "buy_dates": [
+      "2024-07-24"
+    ]
   },
   {
     "code": "545A",
@@ -470,7 +653,11 @@
     "div_amount": 40,
     "yutai_month1": 9,
     "yutai_month2": "-",
-    "yutai_content": "2,000円相当のクオカード"
+    "yutai_content": "2,000円相当のクオカード",
+    "acquisition_price": 951.0,
+    "buy_dates": [
+      "2025-02-28"
+    ]
   },
   {
     "code": "5902",
@@ -481,7 +668,11 @@
     "div_amount": 52,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "缶詰詰合せ"
+    "yutai_content": "缶詰詰合せ",
+    "acquisition_price": 1411.0,
+    "buy_dates": [
+      "2021-12-06"
+    ]
   },
   {
     "code": "6029",
@@ -492,7 +683,11 @@
     "div_amount": 3,
     "yutai_month1": 12,
     "yutai_month2": "-",
-    "yutai_content": "4,000円相当の自社取扱商品（ヘルスケア商品）"
+    "yutai_content": "4,000円相当の自社取扱商品（ヘルスケア商品）",
+    "acquisition_price": 173.0,
+    "buy_dates": [
+      "2024-03-13"
+    ]
   },
   {
     "code": "6045",
@@ -503,7 +698,11 @@
     "div_amount": 30,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "5,000円相当の｢デジタルギフト｣"
+    "yutai_content": "5,000円相当の｢デジタルギフト｣",
+    "acquisition_price": 1535.0,
+    "buy_dates": [
+      "2025-12-08"
+    ]
   },
   {
     "code": "6089",
@@ -514,7 +713,11 @@
     "div_amount": 44,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "クオカード"
+    "yutai_content": "クオカード",
+    "acquisition_price": 1114.0,
+    "buy_dates": [
+      "2024-02-19"
+    ]
   },
   {
     "code": "6419",
@@ -525,7 +728,11 @@
     "div_amount": 145,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 2850.0,
+    "buy_dates": [
+      "2025-06-02"
+    ]
   },
   {
     "code": "6546",
@@ -536,7 +743,12 @@
     "div_amount": 32,
     "yutai_month1": 12,
     "yutai_month2": "-",
-    "yutai_content": "クオカード"
+    "yutai_content": "クオカード",
+    "acquisition_price": 1096.7,
+    "buy_dates": [
+      "2023-12-11",
+      "2025-05-08"
+    ]
   },
   {
     "code": "6630",
@@ -547,7 +759,14 @@
     "div_amount": 8.5,
     "yutai_month1": 12,
     "yutai_month2": "-",
-    "yutai_content": "自社商品セット等"
+    "yutai_content": "自社商品セット等",
+    "acquisition_price": 765.2,
+    "buy_dates": [
+      "2023-12-18",
+      "2024-12-25",
+      "2025-10-14",
+      "2025-10-27"
+    ]
   },
   {
     "code": "7087",
@@ -558,7 +777,13 @@
     "div_amount": 40,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "クオカード"
+    "yutai_content": "クオカード",
+    "acquisition_price": 1305.3,
+    "buy_dates": [
+      "2025-11-10",
+      "2025-12-19",
+      "2025-12-23"
+    ]
   },
   {
     "code": "7135",
@@ -569,7 +794,12 @@
     "div_amount": 0,
     "yutai_month1": 6,
     "yutai_month2": 12,
-    "yutai_content": "優待券（1,000円）"
+    "yutai_content": "優待券（1,000円）",
+    "acquisition_price": 143.3,
+    "buy_dates": [
+      "2023-12-11",
+      "2024-10-01"
+    ]
   },
   {
     "code": "7185",
@@ -580,7 +810,11 @@
     "div_amount": 39,
     "yutai_month1": 9,
     "yutai_month2": "-",
-    "yutai_content": "自社キャンペーン商品（食品等詰合せ） 10,000円相当"
+    "yutai_content": "自社キャンペーン商品（食品等詰合せ） 10,000円相当",
+    "acquisition_price": 3580.0,
+    "buy_dates": [
+      "2025-11-25"
+    ]
   },
   {
     "code": "7196",
@@ -591,7 +825,11 @@
     "div_amount": 30,
     "yutai_month1": 7,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 799.0,
+    "buy_dates": [
+      "2025-02-06"
+    ]
   },
   {
     "code": "7212",
@@ -602,7 +840,12 @@
     "div_amount": 20,
     "yutai_month1": 3,
     "yutai_month2": null,
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 645.7,
+    "buy_dates": [
+      "2024-03-11",
+      "2024-05-31"
+    ]
   },
   {
     "code": "7294",
@@ -613,7 +856,12 @@
     "div_amount": 31,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "商品またはクオカード"
+    "yutai_content": "商品またはクオカード",
+    "acquisition_price": 934.3,
+    "buy_dates": [
+      "2024-03-12",
+      "2025-12-09"
+    ]
   },
   {
     "code": "7416",
@@ -624,7 +872,11 @@
     "div_amount": 15.5,
     "yutai_month1": 3,
     "yutai_month2": null,
-    "yutai_content": "ネクタイまたはワイシャツまたはブラウス贈呈券1枚6,000円"
+    "yutai_content": "ネクタイまたはワイシャツまたはブラウス贈呈券1枚6,000円",
+    "acquisition_price": 509.0,
+    "buy_dates": [
+      "2021-12-13"
+    ]
   },
   {
     "code": "7421",
@@ -635,7 +887,11 @@
     "div_amount": 5,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "株主優待カードのポイント付与"
+    "yutai_content": "株主優待カードのポイント付与",
+    "acquisition_price": 1406.0,
+    "buy_dates": [
+      "2025-01-27"
+    ]
   },
   {
     "code": "7603",
@@ -646,7 +902,11 @@
     "div_amount": null,
     "yutai_month1": 2,
     "yutai_month2": 8,
-    "yutai_content": "優待券（1,000円）"
+    "yutai_content": "優待券（1,000円）",
+    "acquisition_price": 195.0,
+    "buy_dates": [
+      "2025-10-27"
+    ]
   },
   {
     "code": "7686",
@@ -657,7 +917,11 @@
     "div_amount": 20,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当の自社子会社運営ＥＣサイトクーポン券"
+    "yutai_content": "1,000円相当の自社子会社運営ＥＣサイトクーポン券",
+    "acquisition_price": 410.0,
+    "buy_dates": [
+      "2026-06-24"
+    ]
   },
   {
     "code": "7743",
@@ -668,7 +932,11 @@
     "div_amount": 15,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "(3)優待ポイント"
+    "yutai_content": "(3)優待ポイント",
+    "acquisition_price": 501.0,
+    "buy_dates": [
+      "2024-10-15"
+    ]
   },
   {
     "code": "7840",
@@ -679,7 +947,12 @@
     "div_amount": 28,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "3,000円相当の自社グループ製品"
+    "yutai_content": "3,000円相当の自社グループ製品",
+    "acquisition_price": 1225.0,
+    "buy_dates": [
+      "2024-03-04",
+      "2026-05-29"
+    ]
   },
   {
     "code": "7872",
@@ -690,7 +963,11 @@
     "div_amount": 27,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "500円相当のクオカード　9月のみ"
+    "yutai_content": "500円相当のクオカード　9月のみ",
+    "acquisition_price": 607.0,
+    "buy_dates": [
+      "2024-11-01"
+    ]
   },
   {
     "code": "7874",
@@ -701,7 +978,11 @@
     "div_amount": 27,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "3,000円相当の製品詰合せ（キャラクター用品・家庭用品・掃除用品等）"
+    "yutai_content": "3,000円相当の製品詰合せ（キャラクター用品・家庭用品・掃除用品等）",
+    "acquisition_price": 903.0,
+    "buy_dates": [
+      "2026-05-28"
+    ]
   },
   {
     "code": "7883",
@@ -712,7 +993,11 @@
     "div_amount": 6,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "クオカード  500円"
+    "yutai_content": "クオカード  500円",
+    "acquisition_price": 395.0,
+    "buy_dates": [
+      "2019-07-16"
+    ]
   },
   {
     "code": "7893",
@@ -723,7 +1008,12 @@
     "div_amount": 36,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "クオカード　500円"
+    "yutai_content": "クオカード　500円",
+    "acquisition_price": 1088.6,
+    "buy_dates": [
+      "2024-03-11",
+      "2025-06-05"
+    ]
   },
   {
     "code": "7962",
@@ -734,7 +1024,11 @@
     "div_amount": 14,
     "yutai_month1": 6,
     "yutai_month2": "-",
-    "yutai_content": "株主優待クーポン1枚"
+    "yutai_content": "株主優待クーポン1枚",
+    "acquisition_price": 851.0,
+    "buy_dates": [
+      "2024-11-25"
+    ]
   },
   {
     "code": "7979",
@@ -745,7 +1039,11 @@
     "div_amount": 61,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "3,960円相当の自社取扱製品（薬用ハミガキセット・マスク）"
+    "yutai_content": "3,960円相当の自社取扱製品（薬用ハミガキセット・マスク）",
+    "acquisition_price": 1835.0,
+    "buy_dates": [
+      "2025-12-08"
+    ]
   },
   {
     "code": "8013",
@@ -756,7 +1054,12 @@
     "div_amount": 0,
     "yutai_month1": 1,
     "yutai_month2": "-",
-    "yutai_content": "靴下　ポイント付与"
+    "yutai_content": "靴下　ポイント付与",
+    "acquisition_price": 297.8,
+    "buy_dates": [
+      "2025-12-23",
+      "2026-02-13"
+    ]
   },
   {
     "code": "8104",
@@ -767,7 +1070,11 @@
     "div_amount": 20,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 460.0,
+    "buy_dates": [
+      "2025-04-09"
+    ]
   },
   {
     "code": "8282",
@@ -778,7 +1085,11 @@
     "div_amount": 44,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "優待割引券（1000円）"
+    "yutai_content": "優待割引券（1000円）",
+    "acquisition_price": 1300.0,
+    "buy_dates": [
+      "2021-06-11"
+    ]
   },
   {
     "code": "8285",
@@ -789,7 +1100,11 @@
     "div_amount": 8.5,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "5000円←1,500円相当"
+    "yutai_content": "5000円←1,500円相当",
+    "acquisition_price": 308.0,
+    "buy_dates": [
+      "2024-08-07"
+    ]
   },
   {
     "code": "8897",
@@ -800,7 +1115,11 @@
     "div_amount": 24,
     "yutai_month1": "-",
     "yutai_month2": "-",
-    "yutai_content": "-"
+    "yutai_content": "-",
+    "acquisition_price": 396.0,
+    "buy_dates": [
+      "2025-05-28"
+    ]
   },
   {
     "code": "8904",
@@ -811,7 +1130,11 @@
     "div_amount": 38,
     "yutai_month1": 8,
     "yutai_month2": "-",
-    "yutai_content": "1,000円相当のクオカード"
+    "yutai_content": "1,000円相当のクオカード",
+    "acquisition_price": 806.0,
+    "buy_dates": [
+      "2022-03-01"
+    ]
   },
   {
     "code": "8917",
@@ -822,7 +1145,12 @@
     "div_amount": 42,
     "yutai_month1": 4,
     "yutai_month2": 10,
-    "yutai_content": "クオカードまたは商品"
+    "yutai_content": "クオカードまたは商品",
+    "acquisition_price": 1000.7,
+    "buy_dates": [
+      "2024-03-12",
+      "2024-11-15"
+    ]
   },
   {
     "code": "8918",
@@ -833,7 +1161,11 @@
     "div_amount": null,
     "yutai_month1": null,
     "yutai_month2": "-",
-    "yutai_content": null
+    "yutai_content": null,
+    "acquisition_price": 8.2,
+    "buy_dates": [
+      "2023-08-25"
+    ]
   },
   {
     "code": "9160",
@@ -844,7 +1176,11 @@
     "div_amount": 0,
     "yutai_month1": 12,
     "yutai_month2": "-",
-    "yutai_content": "食品またはＷｅｂ型カタログギフト"
+    "yutai_content": "食品またはＷｅｂ型カタログギフト",
+    "acquisition_price": 313.0,
+    "buy_dates": [
+      "2023-12-22"
+    ]
   },
   {
     "code": "9221",
@@ -855,7 +1191,11 @@
     "div_amount": 30,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "5,000円相当の｢デジタルギフト｣"
+    "yutai_content": "5,000円相当の｢デジタルギフト｣",
+    "acquisition_price": 1178.0,
+    "buy_dates": [
+      "2025-12-08"
+    ]
   },
   {
     "code": "9278",
@@ -866,7 +1206,12 @@
     "div_amount": 30,
     "yutai_month1": 5,
     "yutai_month2": "-",
-    "yutai_content": "自社グループ買物券 2,000円相当"
+    "yutai_content": "自社グループ買物券 2,000円相当",
+    "acquisition_price": 2031.2,
+    "buy_dates": [
+      "2024-04-08",
+      "2026-02-20"
+    ]
   },
   {
     "code": "9475",
@@ -877,7 +1222,11 @@
     "div_amount": 0,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社運営投資情報サイト無料利用クーポン"
+    "yutai_content": "自社運営投資情報サイト無料利用クーポン",
+    "acquisition_price": 396.0,
+    "buy_dates": [
+      "2025-01-15"
+    ]
   },
   {
     "code": "9788",
@@ -888,7 +1237,11 @@
     "div_amount": 43,
     "yutai_month1": 3,
     "yutai_month2": "-",
-    "yutai_content": "自社グループ会社商品"
+    "yutai_content": "自社グループ会社商品",
+    "acquisition_price": 542.0,
+    "buy_dates": [
+      "2024-01-31"
+    ]
   },
   {
     "code": "9876",
@@ -899,7 +1252,11 @@
     "div_amount": 0,
     "yutai_month1": 2,
     "yutai_month2": "-",
-    "yutai_content": "株主優待割引券（20%割引）"
+    "yutai_content": "株主優待割引券（20%割引）",
+    "acquisition_price": 183.0,
+    "buy_dates": [
+      "2024-12-13"
+    ]
   },
   {
     "code": "9902",
@@ -910,7 +1267,12 @@
     "div_amount": 70,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "クオカード2000 讃岐うどん1500"
+    "yutai_content": "クオカード2000 讃岐うどん1500",
+    "acquisition_price": 2431.5,
+    "buy_dates": [
+      "2025-10-27",
+      "2025-11-11"
+    ]
   },
   {
     "code": "9997",
@@ -921,6 +1283,10 @@
     "div_amount": 29,
     "yutai_month1": 3,
     "yutai_month2": 9,
-    "yutai_content": "通信販売優待券"
+    "yutai_content": "通信販売優待券",
+    "acquisition_price": 840.0,
+    "buy_dates": [
+      "2026-04-28"
+    ]
   }
 ]

@@ -8,34 +8,45 @@
 </head>
 <body>
 <header class="app-header">
-  <h1>優待候補ダッシュボード</h1>
-  <p class="updated-at" id="updatedAt"></p>
+  <div class="header-top">
+    <h1>優待候補</h1>
+    <p class="updated-at" id="updatedAt"></p>
+  </div>
   <input type="search" id="searchBox" class="search-box" placeholder="銘柄名・コードで検索">
+  <div class="col-header">
+    <span class="col-name">銘柄</span>
+    <span class="col-num">取得値</span>
+    <span class="col-num">現在</span>
+    <span class="col-num">前日比</span>
+    <span class="col-num">儲け</span>
+    <span class="col-toggle"></span>
+  </div>
 </header>
 
-<main id="cardList" class="card-list">
+<main id="rowList" class="row-list">
   <p class="loading">読み込み中...</p>
 </main>
 
-<template id="cardTemplate">
-  <article class="card">
-    <button class="card-summary" type="button">
-      <div class="card-title">
-        <span class="card-code"></span>
-        <span class="card-name"></span>
-      </div>
-      <div class="card-sub">
-        <span class="card-market"></span>
-        <span class="card-toggle">▼</span>
-      </div>
+<template id="rowTemplate">
+  <article class="row">
+    <button class="row-summary" type="button">
+      <span class="col-name">
+        <span class="row-code"></span><span class="row-name"></span>
+      </span>
+      <span class="col-num row-acq"></span>
+      <span class="col-num row-current"></span>
+      <span class="col-num row-change"></span>
+      <span class="col-num row-profit"></span>
+      <span class="col-toggle">▼</span>
     </button>
-    <dl class="card-detail">
-      <dt>配当月</dt><dd class="card-div-month"></dd>
-      <dt>配当金</dt><dd class="card-div-amount"></dd>
-      <dt>優待月</dt><dd class="card-yutai-month"></dd>
-      <dt>優待内容</dt><dd class="card-yutai-content"></dd>
-    </dl>
-    <div class="card-chart" hidden>
+    <div class="row-detail" hidden>
+      <dl class="detail-list">
+        <dt>市場</dt><dd class="detail-market"></dd>
+        <dt>配当月</dt><dd class="detail-div-month"></dd>
+        <dt>配当金</dt><dd class="detail-div-amount"></dd>
+        <dt>優待月</dt><dd class="detail-yutai-month"></dd>
+        <dt>優待内容</dt><dd class="detail-yutai-content"></dd>
+      </dl>
       <div class="period-buttons">
         <button type="button" data-period="1y" class="active">1年</button>
         <button type="button" data-period="5y">5年</button>
