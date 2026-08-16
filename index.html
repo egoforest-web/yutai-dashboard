@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>優待候補ダッシュボード</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>優待候補ダッシュボード</h1>
+  <p class="updated-at" id="updatedAt"></p>
+  <input type="search" id="searchBox" class="search-box" placeholder="銘柄名・コードで検索">
+</header>
+
+<main id="cardList" class="card-list">
+  <p class="loading">読み込み中...</p>
+</main>
+
+<template id="cardTemplate">
+  <article class="card">
+    <button class="card-summary" type="button">
+      <div class="card-title">
+        <span class="card-code"></span>
+        <span class="card-name"></span>
+      </div>
+      <div class="card-sub">
+        <span class="card-market"></span>
+        <span class="card-toggle">▼</span>
+      </div>
+    </button>
+    <dl class="card-detail">
+      <dt>配当月</dt><dd class="card-div-month"></dd>
+      <dt>配当金</dt><dd class="card-div-amount"></dd>
+      <dt>優待月</dt><dd class="card-yutai-month"></dd>
+      <dt>優待内容</dt><dd class="card-yutai-content"></dd>
+    </dl>
+    <div class="card-chart" hidden>
+      <div class="period-buttons">
+        <button type="button" data-period="1y" class="active">1年</button>
+        <button type="button" data-period="5y">5年</button>
+        <button type="button" data-period="10y">10年</button>
+      </div>
+      <div class="chart-wrap">
+        <canvas></canvas>
+      </div>
+      <p class="chart-status"></p>
+    </div>
+  </article>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

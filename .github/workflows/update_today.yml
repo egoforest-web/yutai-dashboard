@@ -1,0 +1,39 @@
+name: Update today price
+
+on:
+  schedule:
+    # JST 9:00-15:30 (UTC 00:00-06:30) の平日、30分おき。
+    # GitHub Actions のcronは実行タイミングが数分前後することがある。
+    - cron: "*/30 0-6 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-today:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Fetch today price
+        run: python scripts/fetch_today.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/today.json; then
+            echo "no change"
+          else
+            git add data/today.json
+            git commit -m "chore: update today.json"
+            git push
+          fi
