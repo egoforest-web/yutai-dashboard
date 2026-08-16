@@ -50,8 +50,14 @@ body {
   top: 0;
   z-index: 10;
   background: var(--bg);
-  padding: 8px 6px 4px;
+  padding: 8px 0 4px;
   border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 6px;
 }
 
 .header-top {
