@@ -58,6 +58,8 @@ body {
   margin: 0;
   font-size: 0.95rem;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .updated-at {
@@ -65,6 +67,9 @@ body {
   font-size: 0.65rem;
   color: var(--text-muted);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .search-box {
@@ -86,6 +91,13 @@ body {
   padding: 3px 6px;
   font-size: 0.65rem;
   color: var(--text-muted);
+}
+
+.col-header .col-name,
+.col-header .col-num {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .col-header .col-num {
@@ -139,6 +151,7 @@ body {
   font-size: 0.6rem;
   color: var(--text-muted);
   flex-shrink: 0;
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
@@ -185,6 +198,7 @@ body {
 
 .detail-list dt {
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .detail-list dd {
@@ -205,6 +219,7 @@ body {
   background: var(--row-bg);
   color: var(--text);
   font-size: 0.72rem;
+  white-space: nowrap;
   cursor: pointer;
 }
 
