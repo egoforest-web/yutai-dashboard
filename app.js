@@ -10,14 +10,26 @@
     historyCache: new Map(), // code -> {dates, closes}
     chartInstances: new Map(), // code -> Chart
     selectedPeriod: new Map(), // code -> "1y" | "5y" | "10y"
-    sortKey: "code", // "code" | "change" | "profit"
+    sortKey: "code", // "code" | "acq" | "current" | "change" | "profit"
+    sortDir: "asc", // "asc" | "desc"
+  };
+
+  const SORT_FIELDS = {
+    code: "code",
+    acq: "acquisition_price",
+    current: "current",
+    change: "changePct",
+    profit: "profitPct",
   };
 
   const rowList = document.getElementById("rowList");
   const rowTemplate = document.getElementById("rowTemplate");
   const searchBox = document.getElementById("searchBox");
   const updatedAtEl = document.getElementById("updatedAt");
-  const sortButtons = document.querySelectorAll(".sort-buttons button");
+  const sortHeaderButtons = document.querySelectorAll(".col-header button[data-sort]");
+  sortHeaderButtons.forEach((btn) => {
+    btn.dataset.label = btn.textContent;
+  });
 
   function formatMonths(m1, m2) {
     const parts = [m1, m2].filter(
@@ -85,21 +97,39 @@
     refreshList();
   }
 
-  function sortHoldings(list, sortKey) {
-    if (sortKey !== "change" && sortKey !== "profit") return list;
-    const field = sortKey === "change" ? "changePct" : "profitPct";
+  function sortHoldings(list, sortKey, sortDir) {
+    const field = SORT_FIELDS[sortKey] || "code";
+    const dir = sortDir === "desc" ? -1 : 1;
     const withValue = [];
     const withoutValue = [];
     for (const h of list) {
-      (h[field] === null || h[field] === undefined ? withoutValue : withValue).push(h);
+      const v = h[field];
+      (v === null || v === undefined || v === "" ? withoutValue : withValue).push(h);
     }
-    withValue.sort((a, b) => a[field] - b[field]);
+    withValue.sort((a, b) => {
+      const av = a[field];
+      const bv = b[field];
+      if (typeof av === "string" || typeof bv === "string") {
+        return dir * String(av).localeCompare(String(bv), "ja");
+      }
+      return dir * (av - bv);
+    });
     return withValue.concat(withoutValue);
+  }
+
+  function updateSortHeaderUI() {
+    sortHeaderButtons.forEach((btn) => {
+      const isActive = btn.dataset.sort === state.sortKey;
+      btn.classList.toggle("active", isActive);
+      btn.textContent = isActive
+        ? `${btn.dataset.label} ${state.sortDir === "asc" ? "▲" : "▼"}`
+        : btn.dataset.label;
+    });
   }
 
   function refreshList() {
     const filtered = filterHoldings(state.holdings, searchBox.value);
-    renderRowList(sortHoldings(filtered, state.sortKey));
+    renderRowList(sortHoldings(filtered, state.sortKey, state.sortDir));
   }
 
   function filterHoldings(holdings, query) {
@@ -313,13 +343,21 @@
 
   searchBox.addEventListener("input", refreshList);
 
-  sortButtons.forEach((btn) => {
+  sortHeaderButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      state.sortKey = btn.dataset.sort;
-      sortButtons.forEach((b) => b.classList.toggle("active", b === btn));
+      const key = btn.dataset.sort;
+      if (state.sortKey === key) {
+        state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      } else {
+        state.sortKey = key;
+        state.sortDir = "asc";
+      }
+      updateSortHeaderUI();
       refreshList();
     });
   });
+
+  updateSortHeaderUI();
 
   loadData().catch((err) => {
     rowList.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${err}</p>`;
