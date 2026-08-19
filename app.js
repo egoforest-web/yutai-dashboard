@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const PERIOD_DAYS = { "1y": 252, "5y": 1260, "10y": 2520 };
+  const PERIOD_DAYS = { "1m": 30, "1y": 252, "5y": 1260, "10y": 2520 };
 
   const state = {
     holdings: [],
