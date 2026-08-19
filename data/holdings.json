@@ -457,6 +457,21 @@
     ]
   },
   {
+    "code": "4335",
+    "name": "4335 ＩＰＳＨＤ",
+    "market": "東証",
+    "div_month1": 6,
+    "div_month2": null,
+    "div_amount": 38,
+    "yutai_month1": 6,
+    "yutai_month2": "-",
+    "yutai_content": "クオカード",
+    "acquisition_price": 1092.0,
+    "buy_dates": [
+      "2026-08-13"
+    ]
+  },
+  {
     "code": "4410",
     "name": "4410 ハリマ化成Ｇ",
     "market": "東証",
