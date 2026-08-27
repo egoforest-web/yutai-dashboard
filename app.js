@@ -31,6 +31,26 @@
     btn.dataset.label = btn.textContent;
   });
 
+  function currentMonthJST() {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "Asia/Tokyo",
+      month: "numeric",
+    }).format(new Date());
+    return Number(parts);
+  }
+
+  const currentMonth = currentMonthJST();
+
+  function isCurrentMonthTarget(holding) {
+    const months = [
+      holding.div_month1,
+      holding.div_month2,
+      holding.yutai_month1,
+      holding.yutai_month2,
+    ];
+    return months.some((m) => Number(m) === currentMonth);
+  }
+
   function formatMonths(m1, m2) {
     const parts = [m1, m2].filter(
       (v) => v !== null && v !== undefined && v !== "" && v !== "-"
@@ -164,7 +184,9 @@
     row.dataset.code = holding.code;
 
     node.querySelector(".row-code").textContent = holding.code;
-    node.querySelector(".row-name").textContent = holding.name || "";
+    const nameEl = node.querySelector(".row-name");
+    nameEl.textContent = holding.name || "";
+    nameEl.classList.toggle("current-month", isCurrentMonthTarget(holding));
 
     node.querySelector(".row-acq").textContent = formatYen(holding.acquisition_price);
     node.querySelector(".row-current").textContent = formatYen(holding.current);

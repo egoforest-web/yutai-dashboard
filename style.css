@@ -9,6 +9,7 @@
   --accent-soft: #eef2ff;
   --up: #d92626;
   --down: #1d6fd9;
+  --month-highlight: #b8860b;
   --row-cols: minmax(0, 1fr) 3.6rem 3.6rem 4.2rem 3.4rem 1.1rem;
 }
 
@@ -24,6 +25,7 @@
     --accent-soft: #22283a;
     --up: #ff6b6b;
     --down: #6fa8ff;
+    --month-highlight: #e0b34c;
   }
 }
 
@@ -220,6 +222,11 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 0.78rem;
+}
+
+.row-name.current-month {
+  color: var(--month-highlight);
+  font-weight: 700;
 }
 
 .col-num {
