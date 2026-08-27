@@ -77,22 +77,6 @@
     ]
   },
   {
-    "code": "247A",
-    "name": "247A Ａｉロボティクス",
-    "market": "東証",
-    "div_month1": 3,
-    "div_month2": null,
-    "div_amount": 0,
-    "yutai_month1": 3,
-    "yutai_month2": 9,
-    "yutai_content": "8,100円相当の自社商品（化粧品）",
-    "acquisition_price": 685.5,
-    "buy_dates": [
-      "2026-04-27",
-      "2026-06-04"
-    ]
-  },
-  {
     "code": "2499",
     "name": "2499 日本和装",
     "market": "東証",
@@ -301,6 +285,21 @@
     "acquisition_price": 988.0,
     "buy_dates": [
       "2021-01-22"
+    ]
+  },
+  {
+    "code": "3185",
+    "name": "3185 夢展望",
+    "market": "東証",
+    "div_month1": null,
+    "div_month2": null,
+    "div_amount": 0,
+    "yutai_month1": 3,
+    "yutai_month2": "-",
+    "yutai_content": "優待ポイント付与",
+    "acquisition_price": 144.0,
+    "buy_dates": [
+      "2026-08-24"
     ]
   },
   {
@@ -810,10 +809,11 @@
     "yutai_month1": 6,
     "yutai_month2": 12,
     "yutai_content": "優待券（1,000円）",
-    "acquisition_price": 143.3,
+    "acquisition_price": 163.0,
     "buy_dates": [
       "2023-12-11",
-      "2024-10-01"
+      "2024-10-01",
+      "2026-08-24"
     ]
   },
   {
