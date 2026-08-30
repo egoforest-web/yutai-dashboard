@@ -87,6 +87,27 @@ body {
   min-width: 0;
 }
 
+/* 定期更新(平日 11:30 / 12:00 / 15:40)が動かなかったときの逃げ道。
+   タップすると GitHub Actions のワークフロー画面が開くので、
+   そこで「Run workflow」を押す。反映までは1〜2分かかる。
+   文字サイズは .updated-at と揃えて rem 指定(em を混ぜると列がずれる)。 */
+.refresh-link {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  /* 見た目を詰めたまま、タップ判定だけ上下左右に広げる。
+     負のマージンで外形を打ち消しているのでヘッダーの高さは変わらない */
+  padding: 9px 8px;
+  margin: -9px -6px -9px 0;
+  border-radius: 4px;
+}
+
+.refresh-link:active {
+  background: var(--accent-soft);
+}
+
 .search-box {
   width: 100%;
   margin-top: 6px;
