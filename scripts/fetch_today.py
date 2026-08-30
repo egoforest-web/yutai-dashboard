@@ -42,7 +42,7 @@ def fetch_latest_prices(codes):
     tickers = [f"{code}.T" for code in codes]
     df = yf.download(
         tickers=tickers,
-        period="5d",
+        period="1mo",
         interval="1d",
         group_by="ticker",
         threads=True,
@@ -81,8 +81,17 @@ def main():
     existing = load_existing_prices()
     fetched = fetch_latest_prices(codes)
 
-    merged = dict(existing)
-    merged.update(fetched)
+    # holdings.json にある銘柄だけを残す(保有外になった銘柄の残骸を掃除する)。
+    # 取得に失敗した銘柄は既存の値を残して穴を空けないが、いつ時点の値かは
+    # date で判別できるようにしてあるので、古いまま居座っていないか stale で確認する。
+    merged = {}
+    stale = []
+    for code in codes:
+        if code in fetched:
+            merged[code] = fetched[code]
+        elif code in existing:
+            merged[code] = existing[code]
+            stale.append(f"{code}({existing[code].get('date')})")
 
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -92,6 +101,8 @@ def main():
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
 
     print(f"対象銘柄数: {len(codes)} / 取得成功: {len(fetched)} / 合計保持: {len(merged)}")
+    if stale:
+        print(f"取得失敗のため前回値を流用: {len(stale)}銘柄 -> {', '.join(stale)}")
 
 
 if __name__ == "__main__":
