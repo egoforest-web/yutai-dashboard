@@ -58,6 +58,41 @@
     return parts.length ? parts.map((v) => `${v}月`).join("・") : "-";
   }
 
+  // JST での「日付・曜日・0時からの経過分」を取り出す。
+  // hourCycle: "h23" は、深夜0時が "24" になる環境があるため明示している。
+  function jstParts(date) {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Asia/Tokyo",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      weekday: "short",
+      hourCycle: "h23",
+    }).formatToParts(date);
+    const p = Object.fromEntries(parts.map((x) => [x.type, x.value]));
+    const WEEKDAY = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    return {
+      date: `${p.year}-${p.month}-${p.day}`,
+      weekday: WEEKDAY[p.weekday],
+      minutes: Number(p.hour) * 60 + Number(p.minute),
+    };
+  }
+
+  // 定期更新(平日 JST 11:30 / 12:07 / 15:40)が止まっていないかの判定。
+  // 見るのは「updated_at の日付が今日(JST)かどうか」だけ。
+  // 祝日でもワークフロー自体は走って updated_at が当日になるので誤検知しない
+  // (株価は前営業日の終値のままだが、それは正しい表示)。
+  // 土日と、その日の初回更新(11:30)より前の時間帯は判定しない。
+  function isStale(iso) {
+    if (!iso) return true;
+    const now = jstParts(new Date());
+    if (now.weekday === 0 || now.weekday === 6) return false;
+    if (now.minutes < 11 * 60 + 45) return false;
+    return jstParts(new Date(iso)).date !== now.date;
+  }
+
   function formatUpdatedAt(iso) {
     if (!iso) return "当日データ: 未取得";
     const d = new Date(iso);
@@ -113,7 +148,12 @@
           : null;
     }
 
-    updatedAtEl.textContent = formatUpdatedAt(state.today.updated_at);
+    const stale = isStale(state.today.updated_at);
+    updatedAtEl.textContent = (stale ? "⚠ " : "") + formatUpdatedAt(state.today.updated_at);
+    updatedAtEl.classList.toggle("stale", stale);
+    updatedAtEl.title = stale
+      ? "定期更新が動いていない可能性があります。「⟳ 更新」から手動実行してください"
+      : "";
     refreshList();
   }
 

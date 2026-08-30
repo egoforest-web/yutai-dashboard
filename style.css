@@ -10,6 +10,7 @@
   --up: #d92626;
   --down: #1d6fd9;
   --month-highlight: #b8860b;
+  --warn: #c2410c;
   --row-cols: minmax(0, 1fr) 3.6rem 3.6rem 4.2rem 3.4rem 1.1rem;
 }
 
@@ -26,6 +27,7 @@
     --up: #ff6b6b;
     --down: #6fa8ff;
     --month-highlight: #e0b34c;
+    --warn: #fbbf24;
   }
 }
 
@@ -106,6 +108,13 @@ body {
 
 .refresh-link:active {
   background: var(--accent-soft);
+}
+
+/* 定期更新が止まっているとき、更新時刻を警告色にして気づけるようにする。
+   判定は app.js の isStale()。色だけ変えて幅は変えないので列はずれない。 */
+.updated-at.stale {
+  color: var(--warn);
+  font-weight: 700;
 }
 
 .search-box {
