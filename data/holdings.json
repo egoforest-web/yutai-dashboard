@@ -644,22 +644,6 @@
     ]
   },
   {
-    "code": "4994",
-    "name": "4994 大成ラミックＧ",
-    "market": "東証",
-    "div_month1": 3,
-    "div_month2": 9,
-    "div_amount": 70,
-    "yutai_month1": 3,
-    "yutai_month2": "-",
-    "yutai_content": "5,000円相当の自社関連商品（食品等詰合せ）",
-    "acquisition_price": 2228.3,
-    "buy_dates": [
-      "2026-04-27",
-      "2026-05-25"
-    ]
-  },
-  {
     "code": "544A",
     "name": "544A ＧＭＳグループ",
     "market": "東証",
@@ -1108,6 +1092,21 @@
     ]
   },
   {
+    "code": "8624",
+    "name": "8624 いちよし",
+    "market": "東証",
+    "div_month1": 3,
+    "div_month2": 9,
+    "div_amount": 34,
+    "yutai_month1": 9,
+    "yutai_month2": null,
+    "yutai_content": "自社オリジナルカレンダー",
+    "acquisition_price": 1713.0,
+    "buy_dates": [
+      "2026-09-04"
+    ]
+  },
+  {
     "code": "8897",
     "name": "8897 ミラースＨＤ",
     "market": "東証",
@@ -1196,22 +1195,6 @@
     "acquisition_price": 1178.0,
     "buy_dates": [
       "2025-12-08"
-    ]
-  },
-  {
-    "code": "9278",
-    "name": "9278 ブックオフＧＨＤ",
-    "market": "東証",
-    "div_month1": 5,
-    "div_month2": null,
-    "div_amount": 30,
-    "yutai_month1": 5,
-    "yutai_month2": "-",
-    "yutai_content": "自社グループ買物券 2,000円相当",
-    "acquisition_price": 2031.2,
-    "buy_dates": [
-      "2024-04-08",
-      "2026-02-20"
     ]
   },
   {
