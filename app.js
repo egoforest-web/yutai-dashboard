@@ -80,16 +80,18 @@
     };
   }
 
-  // 定期更新(平日 JST 11:30 / 12:07 / 15:40)が止まっていないかの判定。
+  // 定期更新(平日 JST 11:45 / 15:45)が止まっていないかの判定。
   // 見るのは「updated_at の日付が今日(JST)かどうか」だけ。
   // 祝日でもワークフロー自体は走って updated_at が当日になるので誤検知しない
   // (株価は前営業日の終値のままだが、それは正しい表示)。
-  // 土日と、その日の初回更新(11:30)より前の時間帯は判定しない。
+  // 土日と、その日の初回更新が画面に出るより前の時間帯は判定しない。
+  // 閾値の12:15は、1本目のcron(11:45)＋実行30秒＋Pages再ビルド＋
+  // 10分キャッシュを見込んだ余裕。cronを動かしたらここも合わせること。
   function isStale(iso) {
     if (!iso) return true;
     const now = jstParts(new Date());
     if (now.weekday === 0 || now.weekday === 6) return false;
-    if (now.minutes < 11 * 60 + 45) return false;
+    if (now.minutes < 12 * 60 + 15) return false;
     return jstParts(new Date(iso)).date !== now.date;
   }
 

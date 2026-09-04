@@ -122,6 +122,22 @@
     ]
   },
   {
+    "code": "2689",
+    "name": "2689 オルバヘルスケアＨＤ",
+    "market": "東証",
+    "div_month1": 6,
+    "div_month2": null,
+    "div_amount": 80,
+    "yutai_month1": 6,
+    "yutai_month2": "-",
+    "yutai_content": "クオカード",
+    "acquisition_price": 1874.5,
+    "buy_dates": [
+      "2024-08-05",
+      "2026-08-31"
+    ]
+  },
+  {
     "code": "2769",
     "name": "2769 ヴィレッジＶ",
     "market": "東証",
@@ -704,21 +720,6 @@
     ]
   },
   {
-    "code": "6045",
-    "name": "6045 レントラックス",
-    "market": "東証",
-    "div_month1": 3,
-    "div_month2": 9,
-    "div_amount": 30,
-    "yutai_month1": 3,
-    "yutai_month2": 9,
-    "yutai_content": "5,000円相当の｢デジタルギフト｣",
-    "acquisition_price": 1535.0,
-    "buy_dates": [
-      "2025-12-08"
-    ]
-  },
-  {
     "code": "6089",
     "name": "6089 ウィルグループ",
     "market": "東証",
@@ -1043,21 +1044,6 @@
     "acquisition_price": 851.0,
     "buy_dates": [
       "2024-11-25"
-    ]
-  },
-  {
-    "code": "7979",
-    "name": "7979 松風",
-    "market": "東証",
-    "div_month1": 3,
-    "div_month2": 9,
-    "div_amount": 61,
-    "yutai_month1": 3,
-    "yutai_month2": 9,
-    "yutai_content": "3,960円相当の自社取扱製品（薬用ハミガキセット・マスク）",
-    "acquisition_price": 1835.0,
-    "buy_dates": [
-      "2025-12-08"
     ]
   },
   {
