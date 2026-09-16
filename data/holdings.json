@@ -259,21 +259,6 @@
     ]
   },
   {
-    "code": "3134",
-    "name": "3134 Ｈａｍｅｅ",
-    "market": "東証",
-    "div_month1": 4,
-    "div_month2": null,
-    "div_amount": 22.5,
-    "yutai_month1": 4,
-    "yutai_month2": 10,
-    "yutai_content": "1,500円相当の｢Ｈａｍｅｅ本店｣利用クーポン",
-    "acquisition_price": 520.0,
-    "buy_dates": [
-      "2025-11-27"
-    ]
-  },
-  {
     "code": "3166",
     "name": "3166 ＯＣＨＩ・ＨＤ",
     "market": "東証",
@@ -921,21 +906,6 @@
     "acquisition_price": 410.0,
     "buy_dates": [
       "2026-06-24"
-    ]
-  },
-  {
-    "code": "7743",
-    "name": "7743 シード",
-    "market": "東証",
-    "div_month1": 3,
-    "div_month2": null,
-    "div_amount": 15,
-    "yutai_month1": 3,
-    "yutai_month2": "-",
-    "yutai_content": "(3)優待ポイント",
-    "acquisition_price": 501.0,
-    "buy_dates": [
-      "2024-10-15"
     ]
   },
   {
