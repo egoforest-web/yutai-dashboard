@@ -61,6 +61,21 @@
     ]
   },
   {
+    "code": "2379",
+    "name": "2379 ディップ",
+    "market": "東証",
+    "div_month1": 2,
+    "div_month2": 8,
+    "div_amount": 97,
+    "yutai_month1": 2,
+    "yutai_month2": 8,
+    "yutai_content": "オリジナルQUOカード 100株以上500円分、500株以上1,000円分（年2回、権利確定月6月・12月）",
+    "acquisition_price": 1476.0,
+    "buy_dates": [
+      "2026-10-26"
+    ]
+  },
+  {
     "code": "2385",
     "name": "2385 総医研",
     "market": "東証",
@@ -74,6 +89,21 @@
     "buy_dates": [
       "2026-02-10",
       "2026-02-12"
+    ]
+  },
+  {
+    "code": "2469",
+    "name": "2469 ヒビノ",
+    "market": "東証",
+    "div_month1": 3,
+    "div_month2": 9,
+    "div_amount": 67.5,
+    "yutai_month1": 3,
+    "yutai_month2": "-",
+    "yutai_content": "株主優待ポイント（1,000ポイント～）",
+    "acquisition_price": 1430.0,
+    "buy_dates": [
+      "2026-10-19"
     ]
   },
   {
@@ -104,6 +134,36 @@
     "acquisition_price": 4090.0,
     "buy_dates": [
       "2026-03-23"
+    ]
+  },
+  {
+    "code": "264A",
+    "name": "264A Ｓｃｈｏｏ",
+    "market": "東証",
+    "div_month1": "-",
+    "div_month2": null,
+    "div_amount": null,
+    "yutai_month1": 9,
+    "yutai_month2": "-",
+    "yutai_content": "「Schoo for Personal プレミアム」の優待利用無料クーポン（1か月分～）",
+    "acquisition_price": 316.6,
+    "buy_dates": [
+      "2026-09-25"
+    ]
+  },
+  {
+    "code": "2653",
+    "name": "2653 イオン九州",
+    "market": "東証",
+    "div_month1": 2,
+    "div_month2": 8,
+    "div_amount": 50,
+    "yutai_month1": 2,
+    "yutai_month2": 8,
+    "yutai_content": "イオン系列で使える優待買物割引券（5,000円相当～）",
+    "acquisition_price": 2720.0,
+    "buy_dates": [
+      "2026-10-19"
     ]
   },
   {
@@ -350,6 +410,21 @@
     ]
   },
   {
+    "code": "3469",
+    "name": "3469 デュアルタップ",
+    "market": "東証",
+    "div_month1": 6,
+    "div_month2": null,
+    "div_amount": 12.5,
+    "yutai_month1": 6,
+    "yutai_month2": "-",
+    "yutai_content": "4,000円相当のＱＵＯカードＰａｙ",
+    "acquisition_price": 842.0,
+    "buy_dates": [
+      "2026-11-05"
+    ]
+  },
+  {
     "code": "3548",
     "name": "3548 バロック",
     "market": "東証",
@@ -411,6 +486,21 @@
     ]
   },
   {
+    "code": "3750",
+    "name": "3750 ADRバイオメディカルホールディングス",
+    "market": "東証",
+    "div_month1": 3,
+    "div_month2": null,
+    "div_amount": 0,
+    "yutai_month1": 3,
+    "yutai_month2": 9,
+    "yutai_content": "QUOカード 100株以上2,500円分（権利確定月3月・9月の年2回）",
+    "acquisition_price": 754.0,
+    "buy_dates": [
+      "2026-10-28"
+    ]
+  },
+  {
     "code": "3815",
     "name": "3815 メディア工房",
     "market": "東証",
@@ -469,6 +559,21 @@
     "acquisition_price": 1092.0,
     "buy_dates": [
       "2026-08-13"
+    ]
+  },
+  {
+    "code": "4376",
+    "name": "4376 くふうカンパニーホールディングス",
+    "market": "東証",
+    "div_month1": "-",
+    "div_month2": null,
+    "div_amount": null,
+    "yutai_month1": 9,
+    "yutai_month2": "-",
+    "yutai_content": "家計簿サービス「Zaim」プレミアムサービス1年間無料利用券など",
+    "acquisition_price": 177.0,
+    "buy_dates": [
+      "2026-09-24"
     ]
   },
   {
@@ -775,10 +880,10 @@
     "market": "東証",
     "div_month1": 6,
     "div_month2": null,
-    "div_amount": 0,
+    "div_amount": 3,
     "yutai_month1": 6,
     "yutai_month2": 12,
-    "yutai_content": "優待券（1,000円）",
+    "yutai_content": "優待券（500円）税込1,000円のお買い物ごとに、１枚（500円）の優待券がご利用可能",
     "acquisition_price": 163.0,
     "buy_dates": [
       "2023-12-11",
@@ -876,6 +981,21 @@
     "acquisition_price": 1406.0,
     "buy_dates": [
       "2025-01-27"
+    ]
+  },
+  {
+    "code": "7532",
+    "name": "7532 パン・パシフィック・インターナショナルホールディングス",
+    "market": "東証",
+    "div_month1": 6,
+    "div_month2": 12,
+    "div_amount": 10,
+    "yutai_month1": 6,
+    "yutai_month2": 12,
+    "yutai_content": "「ドン・キホーテ」のほか、グループ店舗で使えるmajicaポイント（300円相当～）",
+    "acquisition_price": 723.0,
+    "buy_dates": [
+      "2026-09-24"
     ]
   },
   {
@@ -1029,6 +1149,21 @@
     "acquisition_price": 460.0,
     "buy_dates": [
       "2025-04-09"
+    ]
+  },
+  {
+    "code": "8166",
+    "name": "8166 タカキュー",
+    "market": "東証",
+    "div_month1": 2,
+    "div_month2": null,
+    "div_amount": 0,
+    "yutai_month1": 2,
+    "yutai_month2": "-",
+    "yutai_content": "優待券 500株以上6,000円分、1,000株以上12,000円分（5年以上継続保有でさらに加算）",
+    "acquisition_price": 75.0,
+    "buy_dates": [
+      "2026-10-30"
     ]
   },
   {
@@ -1213,19 +1348,18 @@
     ]
   },
   {
-    "code": "9902",
-    "name": "9902 日伝",
+    "code": "9993",
+    "name": "9993 ヤマザワ",
     "market": "東証",
-    "div_month1": 3,
-    "div_month2": 9,
-    "div_amount": 100,
-    "yutai_month1": 3,
-    "yutai_month2": 9,
-    "yutai_content": "クオカード2000 讃岐うどん1500",
-    "acquisition_price": 2431.5,
+    "div_month1": 2,
+    "div_month2": 8,
+    "div_amount": 27,
+    "yutai_month1": 2,
+    "yutai_month2": 8,
+    "yutai_content": "全国共通ギフト券（1,000円）",
+    "acquisition_price": 1154.0,
     "buy_dates": [
-      "2025-10-27",
-      "2025-11-11"
+      "2026-09-16"
     ]
   },
   {
